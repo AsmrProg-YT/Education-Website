@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    color: #4361ee;
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+nav .left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .left .logo img{
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+nav .left .links{
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav .buttons{
+    display: flex;
+    gap: 14px;
+}
+
+nav .buttons a{
+    background-color: #eaf4f4;
+    padding: 10px;
+    color: #2d6a4f;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    justify-content: center;
+    text-align: center;
+    gap: 26px;
+    background-color: #fff;
+    opacity: 0.8;
+    background-image:  radial-gradient(#2d6a4f 0.75px, transparent 0.75px), radial-gradient(#2d6a4f 0.75px, #ffffff 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0,15px 15px;
+}
+
+header .info h1{
+    font-weight: 900;
+    background: #fff;
+}
+
+header .info p{
+    color: #666;
+    font-size: 18px;
+    margin-top: 14px;
+    font-weight: bold;
+    background: #fff;
+}
+
+header .buttons{
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+header .buttons button{
+    border: none;
+    padding: 8px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: #777;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .buttons button.see-all{
+    background-color: #2d6a4f;
+}
+
+header .search{
+    position: relative;
+    width: 30%;
+    margin-top: 10px;
+}
+
+header .search input{
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0px 4px 70px -10px rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+header .search button{
+    position: absolute;
+    right: 0;
+    padding: 12px;
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.content{
+    background-color: #f8f8fa;
+    padding: 100px 80px 0;
+}
+
+.content .separator{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.content .separator a,
+.content .articles .item .bottom a{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #2d6a4f;
+    font-size: 14px;
+}
+
+.content .separator a i,
+.content .articles .item .bottom a i{
+    font-size: 18px;
+}
+
+.content .courses,
+.content .podcasts{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    margin-bottom: 100px;
+}
+
+.content .courses .item,
+.content .podcasts .item{
+    width: 30%;
+}
+
+.content .courses .item .top,
+.content .courses .item .bottom,
+.content .podcasts .item .top,
+.content .podcasts .item .bottom,
+.content .articles .item .top,
+.content .articles .item .bottom{
+    display: flex;
+    gap: 10px;
+    background-color: #fff;
+    padding: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    border-bottom: 1px dashed #888;
+}
+
+.content .courses .item .top img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.content .courses .item .top .info a,
+.content .podcasts .item .top .info a{
+    display: block;
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    line-height: 1.4rem;
+}
+
+.content .courses .item .top .info p,
+.content .podcasts .item .top .info p{
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.content .courses .item .bottom,
+.content .podcasts .item .bottom,
+.content .articles .item .bottom{
+    border-bottom: none;
+    justify-content: space-between;    
+    border-top: 1px dashed #888;
+}
+
+.content .courses .item .bottom .price p{
+    color: #888;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.content .courses .item .bottom h5.tag,
+.content .courses .item .bottom .discount > h5,
+.content .podcasts .item .bottom h5,
+.content .articles .item .bottom h5{
+    font-weight: 500;
+    background-color: #fff2b2;
+    color: #db7c26;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.content .courses .item .bottom h5.tag span,
+.content .courses .item .bottom .discount > h5 span,
+.content .podcasts .item .bottom h5 span,
+.content .articles .item .bottom h5 span{
+    font-weight: bold;
+}
+
+.content .courses .item .bottom .discount{
+    display: flex;
+    gap: 10px;
+}
+
+.content .courses .item .bottom .discount > h5{
+    background-color: #b7e4c7;
+    color: #2d6a4f;
+}
+
+.content .courses .item .bottom .discount .time{
+    text-align: center;
+}
+
+.content .courses .item .bottom .discount .time p{
+    color: #888;
+    font-size: 12px;
+}
+
+.content .courses .item .bottom .discount .time h5{
+    font-size: 13px;
+}
+
+.content .comments{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 0 100px;
+}
+
+.content .comments > p{
+    width: 65%;
+    color: #2d6a4f;
+    font-size: 20px;
+}
+
+.content .comments .right{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 14px;
+}
+
+.content .comments .right .item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff;
+    padding: 8px;
+    width: 32%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.content .comments .right .item img{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.content .comments .right .item p{
+    font-size: 14px;
+}
+
+.content .podcasts .item .top i{
+    font-size: 40px;
+    background-color: #4361ee;
+    padding: 12px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.content .podcasts .item:nth-child(2) .top i{
+    background-color: #f72585;
+}
+
+.content .podcasts .item:nth-child(3) .top i{
+    background-color: #fb8500;
+}
+
+.content .podcasts .item .bottom .duration{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.content .podcasts .item .bottom .duration i{
+    font-size: 26px;
+    color: #2d6a4f;
+}
+
+.content .podcasts .item .bottom .duration p{
+    color: #2d6a4f;
+    font-size: 13px;
+}
+
+.content .podcasts .item .bottom h5{
+    background-color: #ede0d4;
+    color: #9c6644;
+}
+
+.content .articles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.content .articles .item{
+    width: 23%;
+}
+
+.content .articles .item .top{
+    flex-direction: column;
+}
+
+.content .articles .item .top img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 100px 30px;
+    background-color: #2d6a4f;
+    color: #fff;
+    border-radius: 40px 40px 0 0;
+}
+
+footer .columns{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .columns .col{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+footer .columns .col.last{
+    flex: 3;
+}
+
+footer .columns .col h5{
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+
+footer .columns .col a{
+    margin-bottom: 4px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+footer .columns .col a:hover{
+    color: #fff;
+}
+
+footer .columns .col.last p{
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+footer .columns .col.last .social-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .columns .col.last .social-links i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer .copyright{
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px) {
+    
+    nav{
+        padding: 0 60px;
+    }
+
+    header .search{
+        width: 50%;
+    }
+
+    .content{
+        padding: 100px 60px 0;
+    }
+
+    .content .courses .item .top,
+    .content .courses .item .bottom,
+    .content .articles .item .bottom{
+        flex-direction: column;
+    }
+
+    .content .courses .item .top img{
+        width: 100%;
+        height: 180px;
+    }
+
+    .content .courses .item .bottom .price{
+        text-align: center;
+    }
+
+    .content .courses .item .bottom .discount{
+        justify-content: space-between;
+    }
+
+    .content .courses .item .bottom h5.tag{
+        text-align: center;
+    }
+
+    .content .courses .item .bottom .discount > h5{
+        width: 70%;
+        text-align: center;
+    }
+
+    .content .comments{
+        flex-direction: column;
+    }
+
+    .content .comments > p{
+        width: 100%;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 940px) {
+    
+    nav .left .logo{
+        display: none;
+    }
+
+    .content .courses .item,
+    .content .articles .item{
+        width: 45%;
+    }
+
+    .content .courses .item .bottom .discount > h5{
+        width: 80%;
+    }
+
+    .content .comments .right .item{
+        width: 48%;
+    }
+
+    .content .podcasts .item .top,
+    .content .podcasts .item .bottom{
+        flex-direction: column;
+    }
+
+    .content .podcasts .item .top i{
+        text-align: center;
+        padding: 18px;
+    }
+
+    .content .podcasts .item .bottom{
+        text-align: center;
+    }
+
+    .content .articles .item .top img{
+        height: 220px;
+    }
+
+    footer{
+        padding: 60px 70px 30px;
+    }
+
+    footer .columns{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    footer .columns .col,
+    footer .columns .col.last{
+        width: 45%;
+        flex: none;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    
+    nav{
+        padding: 0 30px;
+    }
+
+    nav .left .links{
+        font-size: 13px;
+        gap: 14px;
+    }
+
+    nav .buttons a:first-child{
+        display: none;
+    }
+
+    header .info h1{
+        font-size: 26px;
+    }
+
+    header .info p{
+        font-size: 16px;
+    }
+
+    header .search{
+        width: 70%;
+    }
+
+    .content{
+        padding: 100px 30px 0;
+    }
+
+    .content .courses .item .top{
+        height: 324px;
+    }
+
+    .content .courses .item .bottom .discount .time{
+        display: none;
+    }
+
+    .content .courses .item .bottom .discount > h5{
+        width: 100%;
+    }
+
+    .content .articles .item .top img{
+        height: 160px;
+    }
+
+    footer{
+        padding: 60px 50px 30px;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    
+    nav .left .links a:nth-child(5),
+    nav .left .links a:nth-child(6){
+        display: none;
+    }
+
+    .content .courses .item .top .info a,
+    .content .podcasts .item .top .info a{
+        font-size: 14px;
+    }
+
+    .content .comments .right .item p{
+        font-size: 13px;
+    }
+
+    .content .podcasts .item .top .info p{
+        font-size: 11px;
+    }
+
+    .content .podcasts .item .bottom .duration i{
+        font-size: 20px;
+    }
+
+    footer{
+        padding: 60px 30px 30px;
+    }
+
+}
